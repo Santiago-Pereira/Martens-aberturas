@@ -16,6 +16,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { useState } from "react";
 import CategoriasDropDown from "./CategoriasDropDown";
+import CategoriesDropDownMobile from "./CategoriesDropDownMobile";
 
 //drawer
 const drawerWidth = 240;
@@ -39,13 +40,13 @@ export function NavBar(props) {
       <List onClick={handleDrawerToggle}>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
+            <ListItemButton>
               <ListItemText primary={item} />
             </ListItemButton>
           </ListItem>
         ))}
       </List>
-      <CategoriasDropDown hideMenu={handleDrawerToggle} />
+      <CategoriesDropDownMobile hideMenu={handleDrawerToggle} />
     </Box>
   );
 
@@ -69,7 +70,9 @@ export function NavBar(props) {
             sx={{ display: { xs: "none", sm: "block" }, width: "fit-content" }}
           >
             <img
-              src={"https://cdn.logo.com/hotlink-ok/logo-social.png"}
+              src={
+                "https://res.cloudinary.com/dmatgvjjy/image/upload/v1682619752/martens/martens_pkx8qa.png"
+              }
               alt="Logo"
               style={{ height: "40px" }}
             />
