@@ -62,7 +62,7 @@ export function NavBar(props) {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
+            sx={{ mr: 2, display: { sm: "none" } ,color:'black'}}
           >
             <MenuIcon />
           </IconButton>
@@ -79,7 +79,7 @@ export function NavBar(props) {
           </Box>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: "#fff" }}>
+              <Button key={item} sx={{ color: "black" }}>
                 {item}
               </Button>
             ))}
