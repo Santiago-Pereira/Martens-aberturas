@@ -48,7 +48,7 @@ export default function CategoriasDropDown({ hideMenu }) {
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
-        sx={{ color: "#fff" }}
+        sx={{ color: "black" }}
       >
         Categorías
       </Button>
