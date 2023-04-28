@@ -43,7 +43,7 @@ export default function CategoriesDropDownMobile({ hideMenu }) {
             xs: "block",
             sm: "none",
             md: "none",
-          },
+          },color:'red'
         }}
       >
         <Accordion
