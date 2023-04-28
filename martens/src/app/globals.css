@@ -25,7 +25,6 @@ a {
 
 
 
-
 /* --------------------------------Banner Desktop---------------------------------------------- */
 
 .banner-desktop{
@@ -53,7 +52,8 @@ a {
 /* -------------------------MQ MOBILE --------------------------------------------------*/
 @media  only screen and (max-width:650px) {
   .banner-desktop {
-  background-image: url('https://res.cloudinary.com/dmatgvjjy/image/upload/v1682716697/martens/pdf-2-1_gego05.png');
+    background-position: bottom center ;
+  background-image: url('https://res.cloudinary.com/dmatgvjjy/image/upload/v1682720742/martens/pdf-mobile_n7km66.png');
 }
 }
 
