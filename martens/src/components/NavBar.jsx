@@ -55,7 +55,7 @@ export function NavBar(props) {
 
   return (
     <>
-      <AppBar component="nav" sx={{ backgroundColor: "#3b5998" }}>
+      <AppBar component="nav" sx={{ backgroundColor: "#fff" }}>
         <Toolbar sx={{ justifyContent: "space-between" }}>
           <IconButton
             color="inherit"

@@ -5,7 +5,7 @@
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 }
-
+/* --------------------------------styles general---------------------------------------------- */
 * {
   box-sizing: border-box;
   padding: 0;
@@ -22,7 +22,28 @@ a {
   color: inherit;
   text-decoration: none;
 }
-.MuiAccordionSummary-content {
-  /* display: flex;
-  justify-content: center; */
+
+.MuiButton-text {
+  color:black;
+}
+.MuiButtonBase-root{
+  color:black;
+
+}
+
+/* --------------------------------Banner Desktop---------------------------------------------- */
+
+.banner-desktop{
+  background-image: url('https://res.cloudinary.com/dmatgvjjy/image/upload/v1682712005/martens/baner_marten_desktop_2_bw9z3g.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  max-width: 100%;
+  height: auto;
+}
+
+@media  only screen and (max-width:960px) {
+  .banner-desktop {
+  background-image: url('https://res.cloudinary.com/dmatgvjjy/image/upload/v1682712325/martens/Conocenos_jvse81.jpg');
+  }
 }
