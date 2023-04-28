@@ -50,6 +50,8 @@ a {
 }
 
 /* -------------------------MQ MOBILE --------------------------------------------------*/
+
+
 @media  only screen and (max-width:650px) {
   .banner-desktop {
     background-position: bottom center ;
