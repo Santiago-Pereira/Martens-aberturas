@@ -42,8 +42,24 @@ a {
   height: auto;
 }
 
-@media  only screen and (max-width:960px) {
+
+
+
+/* -------------------------MQ TABLET ---------------------------------------------------*/
+
+@media  only screen and (min-width:651px) and (max-width:1024px) {
   .banner-desktop {
-  background-image: url('https://res.cloudinary.com/dmatgvjjy/image/upload/v1682712325/martens/Conocenos_jvse81.jpg');
-  }
+  background-image: url('https://res.cloudinary.com/dmatgvjjy/image/upload/v1682717615/martens/pdf-3-1_grjff8.png');
 }
+}
+
+
+/* -------------------------MQ MOBILE --------------------------------------------------*/
+
+@media  only screen and (max-width:650px) {
+  .banner-desktop {
+  background-image: url('https://res.cloudinary.com/dmatgvjjy/image/upload/v1682716697/martens/pdf-2-1_gego05.png');
+}
+}
+
+
