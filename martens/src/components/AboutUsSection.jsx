@@ -17,11 +17,14 @@ export default function AboutUsSection() {
                             />
                         </Grid2>
                         <Grid2 xs={12} md={6}>
-        <Typography variant="body1" color="initial">Bienvenidos a Martens Todo en Aberturas, una empresa familiar con más de 30 años de experiencia en la ciudad de Tandil. 
-        Desde nuestros comienzos nos hemos dedicado a la fabricación, venta e instalación de todo tipo de aberturas para hogares, comercios y edificios.
+                        <Typography variant="h1" color="initial"> Martens Todo en Aberturas</Typography>   
+        <Typography variant="body1" color="initial">Bienvenidos a, una empresa familiar con más de 30 años de experiencia en la ciudad de Tandil. 
+        Desde nuestros comienzos nos hemos dedicado a la fabricación, venta e instalación de todo tipo de aberturas para hogares, comercios y edificios.</Typography>   
       
-        En Martens Todo en Aberturas, nuestra prioridad es satisfacer las necesidades y deseos de nuestros clientes, brindándoles soluciones a medida para cada proyecto. Desde ventanas y puertas de aluminio, hasta aberturas de madera maciza de alta calidad, ofrecemos una amplia variedad de productos y diseños para adaptarnos a cualquier estilo y presupuesto.
-        En resumen, en Martens Todo en Aberturas somos una empresa familiar comprometida con la excelencia en todo lo que hacemos. Si estás buscando aberturas de calidad, con un servicio personalizado y una atención al detalle excepcional, no dudes en contactarnos. ¡Estaremos encantados de ayudarte en todo lo que necesites!</Typography>    
+
+        <Typography variant="h1" color="initial"> En Martens Todo en Aberturas, nuestra prioridad es satisfacer las necesidades y deseos de nuestros clientes, brindándoles soluciones a medida para cada proyecto. Desde ventanas y puertas de aluminio, hasta aberturas de madera maciza de alta calidad, ofrecemos una amplia variedad de productos y diseños para adaptarnos a cualquier estilo y presupuesto.
+        En resumen, en Martens Todo en Aberturas somos una empresa familiar comprometida con la excelencia en todo lo que hacemos. Si estás buscando aberturas de calidad, con un servicio personalizado y una atención al detalle excepcional, no dudes en contactarnos. ¡Estaremos encantados de ayudarte en todo lo que necesites!
+        </Typography>    
                         </Grid2>
                 </Grid2>
             </Container>
