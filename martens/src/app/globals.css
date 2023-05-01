@@ -38,7 +38,10 @@ a {
 
 
 
-
+.anchor-footer {
+  display: flex;
+  align-items: center;
+}
 
 
 
