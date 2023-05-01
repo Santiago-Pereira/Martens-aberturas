@@ -1,4 +1,5 @@
 "use client";
+import AboutUsSection from "@/components/AboutUsSection";
 import { NavBar } from "../components/NavBar";
 import Banner from "@/components/Banner";
 import Footer from "@/components/Footer";
@@ -9,10 +10,11 @@ export default function Home() {
       <main>
         <NavBar />
         <Banner />
-      </main>
-      <footer>
-        <Footer />
-      </footer>
-    </>
+        <AboutUsSection />
+        <footer>
+          <Footer />
+        </footer>
+      </main>     
+      </>
   );
 }
