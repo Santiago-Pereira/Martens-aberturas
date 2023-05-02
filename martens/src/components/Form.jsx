@@ -22,10 +22,7 @@ export default function Form() {
     e.preventDefault();
     emailjs
       .sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
-        form.current,
-        "YOUR_PUBLIC_KEY"
+        'service_hid7rop', 'template_d55yxef', form.current, 'HY36OVbTtstdhpeyX'
       )
       .then(
         (result) => {

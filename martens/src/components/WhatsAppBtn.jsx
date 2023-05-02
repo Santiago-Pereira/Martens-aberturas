@@ -5,7 +5,7 @@ const WhatsAppBtn = () => {
     <a
       target="_blank"
       rel="noreferrer noopeper"
-      href="https://wa.me/+5491155911291"
+      href="https://wa.me/+5492494588210"
     >
       <IconButton className="btn-wpp">
         <WhatsAppIcon
