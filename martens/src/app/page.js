@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import WhatsAppBtn from "@/components/WhatsAppBtn";
 import Form from "@/components/Form";
 import Map from "@/components/Map";
+import Copyright from "@/components/Copyright";
 
 
 export default function Home() {
@@ -22,6 +23,8 @@ export default function Home() {
           <WhatsAppBtn />
           <Footer />
         </footer>
+        <Copyright />
+
       </main>
     </>
   );
