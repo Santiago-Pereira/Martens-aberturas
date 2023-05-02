@@ -11,6 +11,8 @@ import Grid from '@mui/material/Grid';
 import MailIcon from '@mui/icons-material/Mail';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 // function Copyright(props) {
 //   return (
@@ -28,24 +30,43 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 const theme = createTheme();
 
 export default function Form() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
-  };
 
+  const form = useRef(null);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        'YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY'
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alertMsj();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    form.current.reset();
+    // const handleSubmit = (event) => {
+    //   event.preventDefault();
+    //   const data = new FormData(event.currentTarget);
+    //   console.log({
+    //     email: data.get('email'),
+    //     password: data.get('password'),
+    //   });
+    // };
+  }
   return (
     <ThemeProvider theme={theme}>
-      <Grid container component="main" sx={{ height: '100vh' }}>
+      <Grid container component="div" sx={{ height: '100vh' }}>
         <CssBaseline />
         <Grid
           item
           xs={false}
           sm={4}
-          md={6}
+          md={4}
           sx={{
             backgroundImage: 'url(https://source.unsplash.com/random)',
             backgroundRepeat: 'no-repeat',
@@ -55,7 +76,7 @@ export default function Form() {
             backgroundPosition: 'center',
           }}
         />
-        <Grid item xs={12} sm={8} md={6} component={Paper} elevation={6} square>
+        <Grid item xs={12} sm={8} md={8} component={Paper} elevation={6} square>
           <Box
             sx={{
               my: 8,
@@ -68,17 +89,38 @@ export default function Form() {
             <Avatar sx={{ m: 1, bgcolor: 'darkblue' }}>
               <MailIcon />
             </Avatar>
-            <Typography component="h1" variant="h5">
+            <Typography component="h3" variant="h5">
               Contactanos
             </Typography>
-            <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
+            <Box component="form" ref={form} noValidate onSubmit={sendEmail} sx={{ mt: 1 }}>
               <TextField
                 margin="normal"
                 required
                 fullWidth
-                id="email"
-                label="Ingrese su Email"
-                name="email"
+                id="user_name"
+                label="Ingrese su nombre"
+                type="text"
+                name="user_name"
+                autoComplete="name"
+                autoFocus
+              />
+              <TextField
+                margin="normal"
+                required
+                fullWidth
+                name="user_tel"
+                label="Ingrese su teléfono"
+                type="tel"
+                id="user_tel"
+                autoComplete="current-tel"
+              />
+              <TextField
+                margin="normal"
+                required
+                fullWidth
+                id="user_email"
+                label="Ingrese su email"
+                name="user_email"
                 autoComplete="email"
                 autoFocus
               />
@@ -86,42 +128,28 @@ export default function Form() {
                 margin="normal"
                 required
                 fullWidth
-                name="tel"
-                label="Ingrese su teléfono"
-                type="phone"
-                id="tel"
-                autoComplete="current-tel"
+                id="message"
+                label="Mensaje"
+                multiline
+                name="message"
+                rows={4}
+                defaultValue="Dejanos tu mensaje"
               />
-              {/* <FormControlLabel
-                control={<Checkbox value="remember" color="primary" />}
-                label="Remember me"
-              /> */}
               <Button
                 type="submit"
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
-                
+
               >
                 ENVIAR
               </Button>
-              {/* <Grid container>
-                <Grid item xs>
-                  <Link href="#" variant="body2">
-                    Forgot password?
-                  </Link>
-                </Grid>
-                <Grid item>
-                  <Link href="#" variant="body2">
-                    {"Don't have an account? Sign Up"}
-                  </Link>
-                </Grid>
-              </Grid> */}
-              {/* <Copyright sx={{ mt: 5 }} /> */}
+
+              {/* <Copyright sx={{ mt: 5 }} />   */}
             </Box>
           </Box>
         </Grid>
       </Grid>
     </ThemeProvider>
-  );
-}
+  )
+};

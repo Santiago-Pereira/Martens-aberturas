@@ -4,6 +4,7 @@ import { NavBar } from "../components/NavBar";
 import Banner from "@/components/Banner";
 import Footer from "@/components/Footer";
 import Form from "@/components/Form";
+import Map from "@/components/Map";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <Banner />
         <AboutUsSection />
         <Form />
+        <Map />
 
         <footer>
           <Footer />
