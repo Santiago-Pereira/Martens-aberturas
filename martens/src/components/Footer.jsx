@@ -7,9 +7,8 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 import EmailIcon from "@mui/icons-material/Email";
 import IconButton from "@mui/material/IconButton";
-function Footer() {
-  
 
+function Footer() {
   
   return (
     <Box
