@@ -22,26 +22,20 @@ export default function Form() {
     e.preventDefault();
     emailjs
       .sendForm(
-        'service_hid7rop', 'template_d55yxef', form.current, 'HY36OVbTtstdhpeyX'
+        'service_hid7rop', 'template_e4h0pyg', form.current, 'HY36OVbTtstdhpeyX'
       )
       .then(
         (result) => {
           console.log(result.text);
-          alertMsj();
+          
         },
         (error) => {
           console.log(error.text);
         }
       );
     form.current.reset();
-    // const handleSubmit = (event) => {
-    //   event.preventDefault();
-    //   const data = new FormData(event.currentTarget);
-    //   console.log({
-    //     email: data.get('email'),
-    //     password: data.get('password'),
-    //   });
-    // };
+    //TODO://CONFIGURAR ALERT ENVIO
+
   };
   return (
     <Box sx={{ backgroundColor: "lightgrey" }}>
