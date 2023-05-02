@@ -23,43 +23,54 @@ a {
   text-decoration: none;
 }
 
-
-
 /* --------------------------------Banner Desktop---------------------------------------------- */
 
-.banner-desktop{
-  background-image: url('https://res.cloudinary.com/dmatgvjjy/image/upload/v1682712005/martens/baner_marten_desktop_2_bw9z3g.jpg');
+.banner-desktop {
+  background-image: url("https://res.cloudinary.com/dmatgvjjy/image/upload/v1682712005/martens/baner_marten_desktop_2_bw9z3g.jpg");
   background-position: center center;
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size: cover;
   max-width: 100%;
   height: auto;
 }
-
-
 
 .anchor-footer {
   display: flex;
   align-items: center;
 }
 
+/* whatsapp btn */
+.shadow-btn {
+}
 
+.btn-wpp {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  background-color: green;
+  padding: 1rem;
+  position: fixed;
+  right: 1.2rem;
+  bottom: 3rem;
+  z-index: 2000;
+  transition: all 2s ease-out;
+}
+.btn-wpp:hover {
+  background-color: green;
+  transform: scale(1.1);
+}
 
 /* -------------------------MQ TABLET ---------------------------------------------------*/
-@media  only screen and (min-width:651px) and (max-width:1024px) {
+@media only screen and (min-width: 651px) and (max-width: 1024px) {
   .banner-desktop {
-  background-image: url('https://res.cloudinary.com/dmatgvjjy/image/upload/v1682717615/martens/pdf-3-1_grjff8.png');
-}
+    background-image: url("https://res.cloudinary.com/dmatgvjjy/image/upload/v1682717615/martens/pdf-3-1_grjff8.png");
+  }
 }
 
 /* -------------------------MQ MOBILE --------------------------------------------------*/
 
-
-@media  only screen and (max-width:650px) {
+@media only screen and (max-width: 650px) {
   .banner-desktop {
-    background-position: bottom center ;
-  background-image: url('https://res.cloudinary.com/dmatgvjjy/image/upload/v1682720742/martens/pdf-mobile_n7km66.png');
+    background-position: bottom center;
+    background-image: url("https://res.cloudinary.com/dmatgvjjy/image/upload/v1682720742/martens/pdf-mobile_n7km66.png");
+  }
 }
-}
-
-

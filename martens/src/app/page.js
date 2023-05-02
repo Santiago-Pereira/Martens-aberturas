@@ -3,6 +3,7 @@ import AboutUsSection from "@/components/AboutUsSection";
 import { NavBar } from "../components/NavBar";
 import Banner from "@/components/Banner";
 import Footer from "@/components/Footer";
+import WhatsAppBtn from "@/components/WhatsAppBtn";
 
 export default function Home() {
   return (
@@ -12,9 +13,10 @@ export default function Home() {
         <Banner />
         <AboutUsSection />
         <footer>
+          <WhatsAppBtn />
           <Footer />
         </footer>
-      </main>     
-      </>
+      </main>
+    </>
   );
 }
