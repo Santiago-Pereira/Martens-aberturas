@@ -7,6 +7,7 @@ import WhatsAppBtn from "@/components/WhatsAppBtn";
 import Form from "@/components/Form";
 import Map from "@/components/Map";
 import Copyright from "@/components/Copyright";
+import AbstractSection from "@/components/AbstractSection";
 
 
 export default function Home() {
@@ -16,6 +17,8 @@ export default function Home() {
         <NavBar />
         <Banner />
         <AboutUsSection />
+        <AbstractSection />
+
         <Form />
         <Map />
 

@@ -74,3 +74,26 @@ a {
     background-image: url("https://res.cloudinary.com/dmatgvjjy/image/upload/v1682720742/martens/pdf-mobile_n7km66.png");
   }
 }
+
+
+
+.servicios {
+  background: linear-gradient(rgba(129, 127, 139, 0.7), rgba(0, 0, 0, 0.5)),
+    url('https://res.cloudinary.com/dmatgvjjy/image/upload/v1682720742/martens/pdf-mobile_n7km66.png');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nuestrosServicios {
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 5px;
+
+ }
