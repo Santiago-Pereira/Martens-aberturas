@@ -1,15 +1,13 @@
-import {  Container,  Typography } from '@mui/material'
+import {  Box, Container,  Typography } from '@mui/material'
 
 
 export default function AbstractSection() {
     return (
-        <div>
-            <Container id="oportunidades" className="mb-5" maxWidth="xl">
-                {/* Llamo al componente FeaturedItemListContainer y le paso parámetros que luego se leen como props.greeting y props.dataSrc.  */}
-            </Container>
-            <Container className="servicios" maxWidth="xl">
+        <Box>
+                    <Container className="servicios" maxWidth="xl">
                 <div className="nuestrosServicios">
-                    <Typography variant="h3">Fabricamos aberturas. Trabajos a medida</Typography>
+                    <Typography variant="h3">Somos Fabricantes de aberturas.</Typography>
+                    <Typography variant="h3">Realizamos trabajos a medida</Typography>
                     <Typography variant="body1" className="d-block mb-3 ss">Cerramientos</Typography>
                     <Typography variant="body1" className="d-block mb-3 ss">Puertas de ingresos automáticas</Typography>
                     <Typography variant="body1" className="d-block mb-3 ss">Soluciones en chapas</Typography>
@@ -18,7 +16,7 @@ export default function AbstractSection() {
                     <Typography variant="body1" className="d-block mb-3 ss">Trabajos en ciudad y campo</Typography>
                 </div>
             </Container>
-        </div>
+        </Box>
     )
 
 }
