@@ -7,7 +7,7 @@ export default function AboutUsSection() {
         <Box sx={{ backgroundColor: 'lightgrey' }}>
             <Container>
                 <Grid2 container spacing={5}>
-                    <Grid2 xs={12} md={6} sx={{ padding: '2rem', display: "flex", justifyContent: "center" }}>
+                    <Grid2 xs={12} md={6} sx={{ padding: '2rem 0', display: "flex", justifyContent: "center" }}>
                         <img
                             src={
                                 "https://res.cloudinary.com/dmatgvjjy/image/upload/v1682810418/martens/Captura_desde_2023-04-29_20-20-09_ehbz5y.png"

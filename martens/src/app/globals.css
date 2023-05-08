@@ -25,13 +25,13 @@ a {
 
 /* --------------------------------Banner Desktop---------------------------------------------- */
 
-.banner-desktop {
+.banner {
   background-image: url("https://res.cloudinary.com/dmatgvjjy/image/upload/v1682712005/martens/baner_marten_desktop_2_bw9z3g.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   max-width: 100%;
-  height: auto;
+  height: 100vh;
 }
 
 .anchor-footer {
@@ -43,7 +43,7 @@ a {
 
 .servicios {
   background: linear-gradient(rgba(129, 127, 139, 0.7), rgba(21, 15, 15, 0.5)),
-    url('https://res.cloudinary.com/dmatgvjjy/image/upload/v1682720742/martens/pdf-mobile_n7km66.png');
+    url('https://res.cloudinary.com/dmatgvjjy/image/upload/v1683319654/martens/roberto-nickson-FqHU6aeVwf8-unsplash_jbdtbj.jpg');
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -79,9 +79,11 @@ a {
 /* -------------------------MQ MOBILE --------------------------------------------------*/
 
 @media only screen and (max-width: 650px) {
-  .banner-desktop {
+  .banner {
     background-position: bottom center;
     background-image: url("https://res.cloudinary.com/dmatgvjjy/image/upload/v1682720742/martens/pdf-mobile_n7km66.png");
+    height: 100vh;
+
   }
 }
 

@@ -12,41 +12,92 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { Container } from "@mui/material";
+import Snackbar from '@mui/material/Snackbar';
+import Stack from '@mui/material/Stack';
 
 const theme = createTheme();
+
 
 export default function Form() {
   const form = useRef(null);
 
-  const sendEmail = (e) => {
-    e.preventDefault();
-    emailjs
-      .sendForm(
-        'service_hid7rop', 'template_e4h0pyg', form.current, 'HY36OVbTtstdhpeyX'
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-    form.current.reset();
-    //TODO://CONFIGURAR ALERT ENVIO
+  const [state, setState] = React.useState({
+    open: false,
+    vertical: 'top',
+    horizontal: 'center',
+  });
+  const { vertical, horizontal, open } = state;
 
+  const handleClick = (newState) => () => {
+    setState({ open: true, ...newState });
+  };
+
+  const handleClose = () => {
+    setState({ ...state, open: false });
+  };
+ 
+  const buttons = (
+    <React.Fragment>
+      <Button
+        onClick={handleClick({
+          vertical: 'bottom',
+          horizontal: 'center',
+        })}
+      >
+        Top-Center
+      </Button>
+      </React.Fragment>
+       );
+
+  const alertPopUp =()=>{
+    return(
+      <div>
+      {buttons}
+      <Snackbar
+        anchorOrigin={{ vertical, horizontal }}
+        open={open}
+        onClose={handleClose}
+        message="I love snacks"
+        key={vertical + horizontal}
+      />
+    </div>
+    )
+  }
+
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
+  //   emailjs
+  //     .sendForm(
+  //       'service_hid7rop', 'template_e4h0pyg', form.current, 'HY36OVbTtstdhpeyX'
+  //     )
+  //     .then(
+  //       (result) => {
+  //         console.log(result.text);
+          
+  //       },
+  //       (error) => {
+  //         console.log(error.text);
+  //       }
+  //     );
+  //   form.current.reset();
+  //   alertPopUp()
+  // };
+
+  const send = (e) => {
+    e.preventDefault();
+    form.current.reset();
+    alertPopUp()
   };
   return (
-    <Box sx={{ backgroundColor: "lightgrey" }}>
+    <Box sx={{ backgroundColor: "lightgrey" ,padding:'2rem 0'}}>
       <Container>
         <ThemeProvider theme={theme}>
-          <Grid container component="div" sx={{ height: "100vh" }}>
+          <Grid container component="div">
             <CssBaseline />
             <Grid
               item
               xs={false}
-              sm={4}
+              sm={false}
               md={5}
               sx={{
                 backgroundImage:
@@ -59,11 +110,13 @@ export default function Form() {
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
+              component={Paper}
+              elevation={6}
             />
             <Grid
               item
               xs={12}
-              sm={8}
+              sm={12}
               md={7}
               component={Paper}
               elevation={6}
@@ -88,7 +141,7 @@ export default function Form() {
                   component="form"
                   ref={form}
                   noValidate
-                  onSubmit={sendEmail}
+                  onSubmit={send}
                   sx={{ mt: 1 }}
                 >
                   <TextField
@@ -100,7 +153,7 @@ export default function Form() {
                     type="text"
                     name="user_name"
                     autoComplete="name"
-                    autoFocus
+               
                   />
                   <TextField
                     margin="normal"
@@ -119,8 +172,7 @@ export default function Form() {
                     id="user_email"
                     label="Ingrese su email"
                     name="user_email"
-                    autoComplete="email"
-                    autoFocus
+                    autoComplete="email"   
                   />
                   <TextField
                     margin="normal"
@@ -131,7 +183,7 @@ export default function Form() {
                     multiline
                     name="message"
                     rows={4}
-                    defaultValue="Dejanos tu mensaje"
+
                   />
                   <Button
                     type="submit"

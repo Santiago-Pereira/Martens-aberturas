@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 
 
 
@@ -5,8 +6,8 @@
 export default function Banner() {
 
   return (
-    <div style={{ height: '100vh' }} className="banner-desktop">
+    <Box className="banner">
       
-    </div>
+    </Box>
   )
 }
