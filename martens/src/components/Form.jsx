@@ -9,11 +9,10 @@ import Grid from '@mui/material/Grid';
 import MailIcon from '@mui/icons-material/Mail';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { Container } from "@mui/material";
-import Snackbar from '@mui/material/Snackbar';
-import Stack from '@mui/material/Stack';
+import { Container, Snackbar, Alert, AlertTitle } from "@mui/material";
+import { Close } from '@mui/icons-material'
 
 const theme = createTheme();
 
@@ -21,75 +20,46 @@ const theme = createTheme();
 export default function Form() {
   const form = useRef(null);
 
-  const [state, setState] = React.useState({
-    open: false,
-    vertical: 'top',
-    horizontal: 'center',
-  });
-  const { vertical, horizontal, open } = state;
+  const [open, setOpen] = useState(false)
 
-  const handleClick = (newState) => () => {
-    setState({ open: true, ...newState });
+
+
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        'service_hid7rop', 'template_e4h0pyg', form.current, 'HY36OVbTtstdhpeyX'
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    form.current.reset();
   };
 
-  const handleClose = () => {
-    setState({ ...state, open: false });
-  };
- 
-  const buttons = (
-    <React.Fragment>
-      <Button
-        onClick={handleClick({
-          vertical: 'bottom',
-          horizontal: 'center',
-        })}
-      >
-        Top-Center
-      </Button>
-      </React.Fragment>
-       );
-
-  const alertPopUp =()=>{
-    return(
-      <div>
-      {buttons}
-      <Snackbar
-        anchorOrigin={{ vertical, horizontal }}
-        open={open}
-        onClose={handleClose}
-        message="I love snacks"
-        key={vertical + horizontal}
-      />
-    </div>
-    )
-  }
-
-  // const sendEmail = (e) => {
+  // const send = (e) => {
   //   e.preventDefault();
-  //   emailjs
-  //     .sendForm(
-  //       'service_hid7rop', 'template_e4h0pyg', form.current, 'HY36OVbTtstdhpeyX'
-  //     )
-  //     .then(
-  //       (result) => {
-  //         console.log(result.text);
-          
-  //       },
-  //       (error) => {
-  //         console.log(error.text);
-  //       }
-  //     );
   //   form.current.reset();
   //   alertPopUp()
   // };
-
-  const send = (e) => {
-    e.preventDefault();
-    form.current.reset();
-    alertPopUp()
-  };
   return (
-    <Box sx={{ backgroundColor: "lightgrey" ,padding:'2rem 0'}}>
+
+    <section
+data-aos="fade-up"
+data-aos-offset="200"
+data-aos-delay="50"
+data-aos-duration="1000"
+data-aos-easing="ease-in-out"
+data-aos-once="true"
+>
+
+    <Box sx={{ backgroundColor: "lightgrey", padding: '2rem 0' }}>
       <Container>
         <ThemeProvider theme={theme}>
           <Grid container component="div">
@@ -141,7 +111,7 @@ export default function Form() {
                   component="form"
                   ref={form}
                   noValidate
-                  onSubmit={send}
+                  onSubmit={sendEmail}
                   sx={{ mt: 1 }}
                 >
                   <TextField
@@ -153,7 +123,7 @@ export default function Form() {
                     type="text"
                     name="user_name"
                     autoComplete="name"
-               
+
                   />
                   <TextField
                     margin="normal"
@@ -172,7 +142,7 @@ export default function Form() {
                     id="user_email"
                     label="Ingrese su email"
                     name="user_email"
-                    autoComplete="email"   
+                    autoComplete="email"
                   />
                   <TextField
                     margin="normal"
@@ -183,16 +153,29 @@ export default function Form() {
                     multiline
                     name="message"
                     rows={4}
-
                   />
                   <Button
                     type="submit"
                     fullWidth
                     variant="contained"
                     sx={{ mt: 3, mb: 2 }}
+                    onClick={() => setOpen(true)
+                    }
+
                   >
                     ENVIAR
                   </Button>
+                    <Snackbar
+                      open={open}
+                      autoHideDuration={2000}
+                      onClose={() => setOpen(false)}
+                      sx={{ bottom: 0, alignItems: 'center' }}
+                    >
+                      <Alert severity="success" >
+                        <AlertTitle>Enviado</AlertTitle>
+                        Su mensaje ha sido enviado con éxito
+                      </Alert>
+                    </Snackbar>
                 </Box>
               </Box>
             </Grid>
@@ -200,6 +183,7 @@ export default function Form() {
         </ThemeProvider>
       </Container>
     </Box>
+</section>
   );
 }
 

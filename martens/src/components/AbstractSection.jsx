@@ -4,6 +4,15 @@ import Grid2 from '@mui/material/Unstable_Grid2/Grid2'
 
 export default function AbstractSection() {
     return (
+        <section
+data-aos="fade-up"
+data-aos-offset="200"
+data-aos-delay="50"
+data-aos-duration="1000"
+data-aos-easing="ease-in-out"
+data-aos-once="true"
+>
+
         <Grid2 container spacing={1}>
         <Grid2 xs={12} >
 
@@ -20,6 +29,7 @@ export default function AbstractSection() {
             </Box>
         </Grid2>
         </Grid2>
+</section>
 
     )
 
