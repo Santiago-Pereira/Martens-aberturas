@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -17,6 +16,7 @@ import Button from "@mui/material/Button";
 import { useState } from "react";
 import CategoriasDropDown from "./CategoriasDropDown";
 import CategoriesDropDownMobile from "./CategoriesDropDownMobile";
+import Link from "next/link";
 
 //drawer
 const drawerWidth = 240;
@@ -40,9 +40,11 @@ export function NavBar(props) {
       <List onClick={handleDrawerToggle}>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton>
-              <ListItemText primary={item} />
+            <Link href="./app/categories">
+            <ListItemButton >
+              <ListItemText primary={item}  />
             </ListItemButton>
+          </Link>
           </ListItem>
         ))}
       </List>
