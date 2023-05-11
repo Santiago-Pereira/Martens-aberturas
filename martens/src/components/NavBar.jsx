@@ -20,7 +20,21 @@ import Link from "next/link";
 
 //drawer
 const drawerWidth = 240;
-const navItems = ["Inicio", "Nosotros", "Contacto"];
+const navItems = [
+  { title: "Inicio", url: "/" },
+  { title: "Nosotros", url: "/nosotros" },
+  { title: "Contacto", url: "/contacto" }
+]
+
+/* products and services array */
+export const categoriesArray = [
+  { name: "Puertas", url: "/categoria/puertas" },
+  { name: "Portones", url: "/categoria/puertas" },
+  { name: "Ventanas", url: "/categoria/puertas" },
+  { name: "Trabajos en hierro", url: "/categoria/puertas" },
+  { name: "Pérgolas", url: "/categoria/puertas" },
+  { name: "Soluciones generales", url: "/categoria/puertas" },
+];
 
 export function NavBar(props) {
   //drawer functions
@@ -39,12 +53,12 @@ export function NavBar(props) {
       <Divider />
       <List onClick={handleDrawerToggle}>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <Link href="./app/categories">
-            <ListItemButton >
-              <ListItemText primary={item}  />
-            </ListItemButton>
-          </Link>
+          <ListItem key={item.url} disablePadding>
+            <Link href={item.url}>
+              <ListItemButton >
+                <ListItemText primary={item.title} />
+              </ListItemButton>
+            </Link>
           </ListItem>
         ))}
       </List>
@@ -64,7 +78,7 @@ export function NavBar(props) {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } ,color:'black'}}
+            sx={{ mr: 2, display: { sm: "none" }, color: 'black' }}
           >
             <MenuIcon />
           </IconButton>
@@ -79,11 +93,11 @@ export function NavBar(props) {
               style={{ height: "40px" }}
             />
           </Box>
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
+          <Box sx={{ display: { xs: "none", sm: "flex" }, gap: '20px', alignItems: 'center', color: "black" }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: "black" }}>
-                {item}
-              </Button>
+              <Link key={item.url} href={item.url}>
+                {item.title.toUpperCase()}
+              </Link>
             ))}
             <CategoriasDropDown />
           </Box>

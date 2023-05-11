@@ -7,16 +7,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-
-/* products and services array */
-const categoriesArray = [
-  { name: "Puertas" },
-  { name: "Portones" },
-  { name: "Ventanas" },
-  { name: "Trabajos en hierro" },
-  { name: "Pérgolas" },
-  { name: "Soluciones generales" },
-];
+import {categoriesArray} from "./NavBar";
 
 export default function CategoriasDropDown({ hideMenu }) {
   //dropdown on menu functions
@@ -28,15 +19,17 @@ export default function CategoriasDropDown({ hideMenu }) {
 
   const handleClose = () => {
     setAnchorEl(null);
-    hideMenu;
+    hideMenu();
   };
 
   /* categories rendering */
-  function categoryRendering(cats) {
-    return cats?.map((category) => (
-      <MenuItem onClick={handleClose} key={category.name}>
-        {category.name}
-      </MenuItem>
+  function categoryRendering() {
+    return categoriesArray?.map((category) => (
+      <a href={category.url} key={category.url}>
+        <MenuItem onClick={handleClose}>
+          {category.name}
+        </MenuItem>
+      </a>
     ));
   }
   return (
@@ -61,7 +54,7 @@ export default function CategoriasDropDown({ hideMenu }) {
           "aria-labelledby": "basic-button",
         }}
       >
-        {categoryRendering(categoriesArray)}
+        {categoryRendering()}
       </Menu>
     </>
   );
