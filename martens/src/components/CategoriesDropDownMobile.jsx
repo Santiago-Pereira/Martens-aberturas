@@ -6,16 +6,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-
-/* products and services array */
-const categoriesArray = [
-  { name: "Puertas" },
-  { name: "Portones" },
-  { name: "Ventanas" },
-  { name: "Trabajos en hierro" },
-  { name: "Pérgolas" },
-  { name: "Soluciones generales" },
-];
+import { categoriesArray } from "./NavBar";
 
 export default function CategoriesDropDownMobile({ hideMenu }) {
   //dropdown on menu functions
@@ -27,11 +18,13 @@ export default function CategoriesDropDownMobile({ hideMenu }) {
   };
 
   /* categories rendering */
-  function categoryRendering(cats) {
-    return cats?.map((category) => (
-      <MenuItem onClick={handleClose} key={category.name}>
-        {category.name}
-      </MenuItem>
+  function categoryRendering() {
+    return categoriesArray?.map((category) => (
+      <a href={category.url} key={category.url}>
+        <MenuItem onClick={handleClose}>
+          {category.name}
+        </MenuItem>
+      </a>
     ));
   }
   return (
@@ -43,7 +36,7 @@ export default function CategoriesDropDownMobile({ hideMenu }) {
             xs: "block",
             sm: "none",
             md: "none",
-          },color:'black'
+          }, color: 'black'
         }}
       >
         <Accordion
@@ -61,7 +54,7 @@ export default function CategoriesDropDownMobile({ hideMenu }) {
             <Typography>Catergorias</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <div onClick={hideMenu}>{categoryRendering(categoriesArray)}</div>
+            <div onClick={hideMenu}>{categoryRendering()}</div>
           </AccordionDetails>
         </Accordion>
       </Box>

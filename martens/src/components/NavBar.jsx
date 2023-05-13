@@ -12,7 +12,6 @@ import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
 import { useState } from "react";
 import CategoriasDropDown from "./CategoriasDropDown";
 import CategoriesDropDownMobile from "./CategoriesDropDownMobile";
@@ -20,7 +19,21 @@ import Link from "next/link";
 
 //drawer
 const drawerWidth = 240;
-const navItems = ["Inicio", "Nosotros", "Contacto"];
+const navItems = [
+  { title: "Inicio", url: "/" },
+  { title: "Nosotros", url: "/AboutUsSection" },
+  { title: "Contacto", url: "/Form" },
+];
+
+/* products and services array */
+export const categoriesArray = [
+  { name: "Puertas", url: "/product", id: 1 },
+  { name: "Portones", url: "/product", id: 2 },
+  { name: "Ventanas", url: "/product", id: 3 },
+  { name: "Trabajos en hierro", url: "/product", id: 4 },
+  { name: "Pérgolas", url: "/product", id: 5 },
+  { name: "Soluciones generales", url: "/product", id: 6 },
+];
 
 export function NavBar(props) {
   //drawer functions
@@ -39,12 +52,12 @@ export function NavBar(props) {
       <Divider />
       <List onClick={handleDrawerToggle}>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <Link href="./app/categories">
-            <ListItemButton >
-              <ListItemText primary={item}  />
-            </ListItemButton>
-          </Link>
+          <ListItem key={item.id} disablePadding>
+            <Link href={item.url}>
+              <ListItemButton>
+                <ListItemText primary={item.title} />
+              </ListItemButton>
+            </Link>
           </ListItem>
         ))}
       </List>
@@ -64,7 +77,7 @@ export function NavBar(props) {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } ,color:'black'}}
+            sx={{ mr: 2, display: { sm: "none" }, color: "black" }}
           >
             <MenuIcon />
           </IconButton>
@@ -79,11 +92,18 @@ export function NavBar(props) {
               style={{ height: "40px" }}
             />
           </Box>
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
+          <Box
+            sx={{
+              display: { xs: "none", sm: "flex" },
+              gap: "20px",
+              alignItems: "center",
+              color: "black",
+            }}
+          >
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: "black" }}>
-                {item}
-              </Button>
+              <Link key={item.id} href={item.url}>
+                {item.title.toUpperCase()}
+              </Link>
             ))}
             <CategoriasDropDown />
           </Box>

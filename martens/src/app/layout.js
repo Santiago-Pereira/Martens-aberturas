@@ -21,11 +21,11 @@ export default function RootLayout({ children }) {
         <header>
           <NavBar />
         </header>
-
         {children}
         <footer>
           <WhatsAppBtn />
           <Footer />
+          <Copyright />
         </footer>
       </body>
     </html>
