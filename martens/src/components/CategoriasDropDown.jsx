@@ -7,7 +7,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import {categoriesArray} from "./NavBar";
+import { categoriesArray } from "./NavBar";
 
 export default function CategoriasDropDown({ hideMenu }) {
   //dropdown on menu functions
@@ -25,10 +25,8 @@ export default function CategoriasDropDown({ hideMenu }) {
   /* categories rendering */
   function categoryRendering() {
     return categoriesArray?.map((category) => (
-      <a href={category.url} key={category.url}>
-        <MenuItem onClick={handleClose}>
-          {category.name}
-        </MenuItem>
+      <a href={category.url} key={category.id}>
+        <MenuItem onClick={handleClose}>{category.name}</MenuItem>
       </a>
     ));
   }

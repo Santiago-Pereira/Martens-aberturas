@@ -1,4 +1,4 @@
- "use client";
+"use client";
 import { NavBar } from "@/components/NavBar";
 import "./globals.css";
 import { Inter } from "next/font/google";
@@ -18,15 +18,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <body className={inter.className}>
-      <header>
-      <NavBar />
-      </header>
-      
-      {children}
-      <footer>
+        <header>
+          <NavBar />
+        </header>
+        {children}
+        <footer>
           <WhatsAppBtn />
           <Footer />
-       F
+          <Copyright />
         </footer>
       </body>
     </html>

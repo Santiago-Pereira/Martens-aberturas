@@ -11,6 +11,9 @@
   padding: 0;
   margin: 0;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 html,
 body {
@@ -43,7 +46,7 @@ a {
 
 .servicios {
   background: linear-gradient(rgba(129, 127, 139, 0.7), rgba(21, 15, 15, 0.5)),
-    url('https://res.cloudinary.com/dmatgvjjy/image/upload/v1683319654/martens/roberto-nickson-FqHU6aeVwf8-unsplash_jbdtbj.jpg');
+    url("https://res.cloudinary.com/dmatgvjjy/image/upload/v1683319654/martens/roberto-nickson-FqHU6aeVwf8-unsplash_jbdtbj.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -83,9 +86,5 @@ a {
     background-position: bottom center;
     background-image: url("https://res.cloudinary.com/dmatgvjjy/image/upload/v1682720742/martens/pdf-mobile_n7km66.png");
     height: 100vh;
-
   }
 }
-
-
-
