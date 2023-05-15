@@ -1,13 +1,9 @@
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { useState } from "react";
-import { Box, Button } from "@mui/material";
-import Accordion from "@mui/material/Accordion";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import Typography from "@mui/material/Typography";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { categoriesArray } from "./NavBar";
+import Button from "@mui/material/Button";
+import products from "@/app/data";
+import Link from "next/link";
 
 export default function CategoriasDropDown({ hideMenu }) {
   //dropdown on menu functions
@@ -19,17 +15,18 @@ export default function CategoriasDropDown({ hideMenu }) {
 
   const handleClose = () => {
     setAnchorEl(null);
-    hideMenu();
+    /*  hideMenu(); */
   };
 
   /* categories rendering */
   function categoryRendering() {
-    return categoriesArray?.map((category) => (
-      <a href={category.url} key={category.id}>
-        <MenuItem onClick={handleClose}>{category.name}</MenuItem>
-      </a>
+    return products?.map((element, index) => (
+      <Link href={element.category} key={index}>
+        <MenuItem onClick={handleClose}>{element.category}</MenuItem>
+      </Link>
     ));
   }
+
   return (
     <>
       {/* dropdown for desktop */}
@@ -52,7 +49,7 @@ export default function CategoriasDropDown({ hideMenu }) {
           "aria-labelledby": "basic-button",
         }}
       >
-        {categoryRendering()}
+        <div onClick={hideMenu}>{categoryRendering()}</div>
       </Menu>
     </>
   );

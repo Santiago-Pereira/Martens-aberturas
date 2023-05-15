@@ -22,8 +22,8 @@ export default function RootLayout({ children }) {
           <NavBar />
         </header>
         {children}
+        <WhatsAppBtn />
         <footer>
-          <WhatsAppBtn />
           <Footer />
           <Copyright />
         </footer>

@@ -26,14 +26,14 @@ const navItems = [
 ];
 
 /* products and services array */
-export const categoriesArray = [
+/* export const categoriesArray = [
   { name: "Puertas", url: "/product", id: 1 },
   { name: "Portones", url: "/product", id: 2 },
   { name: "Ventanas", url: "/product", id: 3 },
   { name: "Trabajos en hierro", url: "/product", id: 4 },
   { name: "Pérgolas", url: "/product", id: 5 },
   { name: "Soluciones generales", url: "/product", id: 6 },
-];
+]; */
 
 export function NavBar(props) {
   //drawer functions
@@ -51,8 +51,8 @@ export function NavBar(props) {
       </Typography>
       <Divider />
       <List onClick={handleDrawerToggle}>
-        {navItems.map((item) => (
-          <ListItem key={item.id} disablePadding>
+        {navItems.map((item, index) => (
+          <ListItem key={index} disablePadding>
             <Link href={item.url}>
               <ListItemButton>
                 <ListItemText primary={item.title} />
@@ -100,8 +100,8 @@ export function NavBar(props) {
               color: "black",
             }}
           >
-            {navItems.map((item) => (
-              <Link key={item.id} href={item.url}>
+            {navItems.map((item, index) => (
+              <Link key={index} href={item.url}>
                 {item.title.toUpperCase()}
               </Link>
             ))}

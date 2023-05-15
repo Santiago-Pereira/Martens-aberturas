@@ -13,7 +13,7 @@ export default function AboutUsSection() {
       data-aos-easing="ease-in-out"
       data-aos-once="true"
     >
-      <Box sx={{ backgroundColor: "lightgrey" }}>
+      <Box sx={{ paddingY: "2rem" }}>
         <Container>
           <Grid2 container spacing={5}>
             <Grid2

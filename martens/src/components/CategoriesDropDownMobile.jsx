@@ -6,7 +6,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { categoriesArray } from "./NavBar";
+import products from "@/app/data";
 
 export default function CategoriesDropDownMobile({ hideMenu }) {
   //dropdown on menu functions
@@ -19,11 +19,9 @@ export default function CategoriesDropDownMobile({ hideMenu }) {
 
   /* categories rendering */
   function categoryRendering() {
-    return categoriesArray?.map((category) => (
-      <a href={category.url} key={category.url}>
-        <MenuItem onClick={handleClose}>
-          {category.name}
-        </MenuItem>
+    return products?.map((category, index) => (
+      <a href={category.category} key={index}>
+        <MenuItem onClick={handleClose}>{category.category}</MenuItem>
       </a>
     ));
   }
@@ -36,7 +34,8 @@ export default function CategoriesDropDownMobile({ hideMenu }) {
             xs: "block",
             sm: "none",
             md: "none",
-          }, color: 'black'
+          },
+          color: "black",
         }}
       >
         <Accordion
