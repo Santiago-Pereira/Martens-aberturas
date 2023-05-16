@@ -1,7 +1,5 @@
-import { Box } from "@mui/material";
-
 function page() {
-  return <Box sx={{ paddingY: "10rem" }}>page</Box>;
+  return <div>page</div>;
 }
 
 export default page;
