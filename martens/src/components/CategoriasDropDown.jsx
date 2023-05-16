@@ -15,7 +15,6 @@ export default function CategoriasDropDown({ hideMenu }) {
 
   const handleClose = () => {
     setAnchorEl(null);
-    /*  hideMenu(); */
   };
 
   /* categories rendering */
