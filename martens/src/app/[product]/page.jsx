@@ -1,7 +1,6 @@
-"use client";
 import { Box } from "@mui/material";
 
-function page({ params }) {
+function page() {
   return <Box sx={{ paddingY: "10rem" }}>page</Box>;
 }
 
