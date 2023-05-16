@@ -2,8 +2,8 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { useState } from "react";
 import Button from "@mui/material/Button";
-import products from "@/app/data";
 import Link from "next/link";
+import categoriesData from "../app/categoriesData";
 
 export default function CategoriasDropDown({ hideMenu }) {
   //dropdown on menu functions
@@ -19,7 +19,7 @@ export default function CategoriasDropDown({ hideMenu }) {
 
   /* categories rendering */
   function categoryRendering() {
-    return products?.map((element, index) => (
+    return categoriesData?.map((element, index) => (
       <Link href={element.category} key={index}>
         <MenuItem onClick={handleClose}>{element.category}</MenuItem>
       </Link>
