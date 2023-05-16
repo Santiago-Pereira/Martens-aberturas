@@ -1,6 +1,6 @@
 import Modal from "@mui/material/Modal";
 import { Box } from "@mui/material";
-import ProductsCard from "/ProductsCard";
+import ProductsCard from "./ProductsCard";
 import { useState } from "react";
 
 const ModalStyles = {
@@ -20,6 +20,7 @@ function CardsModal({ product }) {
   const handleModalOpen = () => setModalOpen(true);
   const handleModalClose = () => setModalOpen(false);
   <ProductsCard handle={handleModalOpen} />;
+
   return (
     <>
       <Modal

@@ -21,19 +21,9 @@ import Link from "next/link";
 const drawerWidth = 240;
 const navItems = [
   { title: "Inicio", url: "/" },
-  { title: "Nosotros", url: "/AboutUsSection" },
-  { title: "Contacto", url: "/Form" },
+  { title: "Nosotros", url: "#aboutUs" },
+  { title: "Contacto", url: "#contact" },
 ];
-
-/* products and services array */
-/* export const categoriesArray = [
-  { name: "Puertas", url: "/product", id: 1 },
-  { name: "Portones", url: "/product", id: 2 },
-  { name: "Ventanas", url: "/product", id: 3 },
-  { name: "Trabajos en hierro", url: "/product", id: 4 },
-  { name: "Pérgolas", url: "/product", id: 5 },
-  { name: "Soluciones generales", url: "/product", id: 6 },
-]; */
 
 export function NavBar(props) {
   //drawer functions
@@ -84,13 +74,16 @@ export function NavBar(props) {
           <Box
             sx={{ display: { xs: "none", sm: "block" }, width: "fit-content" }}
           >
-            <img
-              src={
-                "https://res.cloudinary.com/dmatgvjjy/image/upload/v1682619752/martens/martens_pkx8qa.png"
-              }
-              alt="Logo"
-              style={{ height: "40px" }}
-            />
+            <Link href={"/"}>
+              <img
+                src={
+                  "https://res.cloudinary.com/dmatgvjjy/image/upload/v1682619752/martens/martens_pkx8qa.png"
+                }
+                alt="Logo"
+                style={{ height: "40px" }}
+                loading="lazy"
+              />
+            </Link>
           </Box>
           <Box
             sx={{

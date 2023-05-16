@@ -48,6 +48,7 @@ export default function Form() {
         data-aos-duration="1000"
         data-aos-easing="ease-in-out"
         data-aos-once="true"
+        id="contact"
       >
         <Box sx={{ paddingY: "2rem ", maxWidth: "100%" }}>
           <ThemeProvider theme={theme}>
