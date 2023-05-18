@@ -1,11 +1,15 @@
 "use client";
-import ProductsCard from "@/components/ProductsCard";
-
-function page() {
-  // Extrae la propiedad 'id' del objeto 'query' del enrutador para acceder al valor de 'id' en la ruta actual
-
-  const category = window.location.pathname.replace("/", "");
-  return <ProductsCard category={category} />;
+import { Typography } from "@mui/material";
+import dynamic from "next/dynamic";
+function page({ params }) {
+  const Navigation = dynamic(() => import("@/components/ProductsCard"), {
+    ssr: false,
+  });
+  return (
+    <>
+      <Navigation category={params.category} />;
+    </>
+  );
 }
 
 export default page;

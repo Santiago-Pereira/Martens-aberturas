@@ -60,7 +60,7 @@ export function NavBar(props) {
 
   return (
     <>
-      <AppBar component="nav" sx={{ backgroundColor: "#fff" }}>
+      <AppBar component="header" sx={{ backgroundColor: "#fff" }}>
         <Toolbar sx={{ justifyContent: "space-between" }}>
           <IconButton
             color="inherit"
@@ -104,7 +104,6 @@ export function NavBar(props) {
       </AppBar>
       <Box component="nav">
         <Drawer
-          container={container}
           variant="temporary"
           open={mobileOpen}
           onClose={handleDrawerToggle}

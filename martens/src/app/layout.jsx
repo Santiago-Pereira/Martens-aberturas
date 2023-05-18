@@ -18,9 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <body className={inter.className}>
-        <header>
-          <NavBar />
-        </header>
+        <NavBar />
         {children}
         <WhatsAppBtn />
         <footer>

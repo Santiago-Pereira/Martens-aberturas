@@ -61,7 +61,7 @@ export default function Form() {
                 md={5}
                 sx={{
                   backgroundImage:
-                    "url(https://res.cloudinary.com/dmatgvjjy/image/upload/v1683062269/martens/burst-kUqqaRjJuw0-unsplash_pwanae.jpg)",
+                    "url(https://res.cloudinary.com/dmatgvjjy/image/upload/v1684438151/martens/1_1_imnrxw.jpg)",
                   backgroundRepeat: "no-repeat",
                   backgroundColor: (t) =>
                     t.palette.mode === "light"

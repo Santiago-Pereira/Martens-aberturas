@@ -13,7 +13,7 @@ export default function Copyright(props) {
         {"Copyright © . Martens todo en aberturas. Hecho por "}
         <Link
           color="inherit"
-          href="hhttps://www.linkedin.com/in/lis-medina/"
+          href="https://www.linkedin.com/in/lis-medina/"
           target="_blank"
         >
           Lis Medina{" "}

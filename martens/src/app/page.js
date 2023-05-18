@@ -7,9 +7,9 @@ import AbstractSection from "@/components/AbstractSection";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ProductsCard from "@/components/ProductsCard";
-AOS.init();
 
 export default function Home() {
+  AOS.init();
   return (
     <>
       <main>
