@@ -1,12 +1,35 @@
 import products from "../app/productsData.js";
-import { CardActionArea, Container, Grid, Typography } from "@mui/material";
+import {
+  CardActionArea,
+  Container,
+  Grid,
+  Modal,
+  Typography,
+} from "@mui/material";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Box from "@mui/material/Box";
-import CardsModal from "./CardsModal.jsx";
+import { useState } from "react";
+
+//modal styles:
+const ModalStyles = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  bgcolor: "background.paper",
+  border: "2px solid #000",
+  boxShadow: 24,
+  p: 4,
+};
 
 function ProductsCard({ category }) {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+  //main function
   let filteredProds = products.filter((prod) => prod.category === category);
   return (
     <>
@@ -24,24 +47,34 @@ function ProductsCard({ category }) {
               <Grid key={product.id} item xs={12} sm={6} md={4} lg={4}>
                 <Card>
                   <Box>
-                    <CardActionArea>
-                      <CardMedia
-                        sx={{ height: 300 }}
-                        image={
-                          "https://res.cloudinary.com/ddfz8iwnf/image/upload/v1684450105/samples/WhatsApp_Image_2023-05-18_at_7.42.23_PM_dktwgb.jpg"
-                        }
-                      />
+                    <CardActionArea onClick={handleOpen}>
+                      <CardMedia sx={{ height: 300 }} image={product.image} />
                     </CardActionArea>
                     <CardContent>
                       <Typography gutterBottom variant="h5" component="div">
                         {product.name}
                       </Typography>
                       <Typography variant="h6" color="text.secondary">
-                        {product.name}
+                        {product.description}
                       </Typography>
                     </CardContent>
                   </Box>
                 </Card>
+                {/*   modal component */}
+                <Modal
+                  open={open}
+                  onClose={handleClose}
+                  aria-labelledby={product.id}
+                >
+                  <Box sx={ModalStyles}>
+                    <img
+                      src={product.image}
+                      loading="lazy"
+                      alt="producto img"
+                      id={product.id}
+                    />
+                  </Box>
+                </Modal>
               </Grid>
             ))}
           </Grid>

@@ -18,7 +18,6 @@ export default function Home() {
         <AbstractSection />
         <Form />
         <Map />
-        <ProductsCard />
       </main>
     </>
   );

@@ -19,15 +19,23 @@ function Footer() {
           }}
         >
           <Grid2 container spacing={5}>
-            <Grid2 md={4} sm={12}>
+            <Grid2
+              md={4}
+              sm={12}
+              sx={{
+                display: { md: "flex", xs: "none" },
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
               <img
                 src={
                   "https://res.cloudinary.com/dmatgvjjy/image/upload/v1682619752/martens/martens_pkx8qa.png"
                 }
                 alt="Logo"
-                style={{
-                  height: "50px",
-                }}
+                loading="lazy"
+                width={"200px"}
+                textAlign={"center"}
               />
               <Grid2
                 md={12}
@@ -43,7 +51,9 @@ function Footer() {
                   className="anchor-footer"
                 >
                   <IconButton>
-                    <FacebookIcon sx={{ fontSize: "1.5rem" }} />
+                    <FacebookIcon
+                      sx={{ fontSize: "1.5rem", color: "#2e3359" }}
+                    />
                   </IconButton>
                 </a>
 
@@ -53,7 +63,9 @@ function Footer() {
                   className="anchor-footer"
                 >
                   <IconButton>
-                    <InstagramIcon sx={{ fontSize: "1.5rem" }} />
+                    <InstagramIcon
+                      sx={{ fontSize: "1.5rem", color: "#2e3359" }}
+                    />
                   </IconButton>
                 </a>
               </Grid2>
