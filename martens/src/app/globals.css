@@ -28,6 +28,42 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+/* ---------------------------------------------navbar items styles-------------------------------------------------------- */
+.css-99t0as a {
+  transition: 0.3s ease;
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+  border-top: 4px solid white;
+  border-bottom: 4px solid white;
+  padding: 15px 0;
+  margin: 0 20px;
+}
+
+.css-99t0as a:hover {
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
+  padding: 6px 0;
+}
+
+#basic-button {
+  transition: 0.3s ease;
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+  border-top: 4px solid white;
+  border-bottom: 4px solid white;
+  padding: 15px 0;
+  margin: 0 20px;
+}
+#basic-button:hover {
+  text-decoration: none;
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
+  padding: 6px 0;
+  background-color: transparent;
+}
 /* --------------------------------Banner Desktop---------------------------------------------- */
 
 .banner {
@@ -42,12 +78,15 @@ a {
 /* --------------------------------abstract section----------------------------------------------- */
 
 .servicios {
-  background: linear-gradient(rgba(129, 127, 139, 0.7), rgba(21, 15, 15, 0.5)),
+  background-image: linear-gradient(
+      rgba(129, 127, 139, 0.7),
+      rgba(21, 15, 15, 0.5)
+    ),
     url("https://res.cloudinary.com/dmatgvjjy/image/upload/v1684438288/martens/4_1_1_k2x1e0.jpg");
   background-attachment: fixed;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
   height: 100vh;
 }
 

@@ -38,14 +38,14 @@ function ProductsCard({ category }) {
         variant="h3"
         sx={{ paddingTop: "6rem", textAlign: "center" }}
       >
-        Nuestros productos
+        Nuestros trabajos
       </Typography>
       <Box sx={{ paddingTop: "6rem" }}>
         <Container>
-          <Grid container spacing={2}>
+          <Grid container spacing={5}>
             {filteredProds.map((product) => (
               <Grid key={product.id} item xs={12} sm={6} md={4} lg={4}>
-                <Card>
+                <Card elevation={8}>
                   <Box>
                     <CardActionArea onClick={handleOpen}>
                       <CardMedia sx={{ height: 300 }} image={product.image} />

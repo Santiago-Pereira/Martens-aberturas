@@ -23,7 +23,7 @@ function Footer() {
               md={4}
               sm={12}
               sx={{
-                display: { md: "flex", xs: "none" },
+                display: { md: "flex" },
                 flexDirection: "column",
                 alignItems: "center",
               }}
@@ -35,7 +35,6 @@ function Footer() {
                 alt="Logo"
                 loading="lazy"
                 width={"200px"}
-                textAlign={"center"}
               />
               <Grid2
                 md={12}
@@ -77,7 +76,7 @@ function Footer() {
               sx={{
                 display: "flex",
                 flexDirection: "column",
-                padding: "0",
+                padding: "0.5rem",
                 alignItems: "start",
               }}
             >
