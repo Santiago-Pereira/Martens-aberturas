@@ -23,6 +23,7 @@ const ModalStyles = {
   bgcolor: "background.paper",
   boxShadow: 24,
   display: Block,
+  zIndex: 150,
 };
 
 function ProductsCard({ category }) {
