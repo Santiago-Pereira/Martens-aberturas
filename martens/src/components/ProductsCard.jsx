@@ -22,24 +22,20 @@ const ModalStyles = {
   maxWidth: "100%",
   bgcolor: "background.paper",
   boxShadow: 24,
-  display:Block
-
+  display: Block,
 };
 
 function ProductsCard({ category }) {
   const [open, setOpen] = useState(false);
 
-  const modalSrc = useRef()
-  const modalAlt = useRef()
+  const modalSrc = useRef();
+  const modalAlt = useRef();
 
   const handleOpen = (src, alt) => {
     setOpen(true);
-    modalSrc.current = src
-    modalAlt.current = alt
-    // const img = document.getElementById('imageFullScreen')
-    // img.setAttribute('alt',alt)
-    // img.setAttribute('src',src)
-  }
+    modalSrc.current = src;
+    modalAlt.current = alt;
+  };
   const handleClose = () => setOpen(false);
   //main function
   let filteredProds = products.filter((prod) => prod.category === category);
@@ -59,7 +55,9 @@ function ProductsCard({ category }) {
               <Grid key={product.id} item xs={12} sm={6} md={4} lg={4}>
                 <Card elevation={8}>
                   <Box>
-                    <CardActionArea onClick={() => handleOpen(product.image, product.name)}>
+                    <CardActionArea
+                      onClick={() => handleOpen(product.image, product.name)}
+                    >
                       <CardMedia sx={{ height: 300 }} image={product.image} />
                     </CardActionArea>
                     <CardContent>
@@ -79,10 +77,7 @@ function ProductsCard({ category }) {
       </Box>
 
       {/*   modal component */}
-      <Modal
-        open={open}
-        onClose={handleClose}
-      >
+      <Modal open={open} onClose={handleClose}>
         <Box sx={ModalStyles}>
           <img
             id="imageFullScreen"
