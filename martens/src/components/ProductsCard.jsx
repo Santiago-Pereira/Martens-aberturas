@@ -10,7 +10,8 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Box from "@mui/material/Box";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { Block } from "@mui/icons-material";
 
 //modal styles:
 const ModalStyles = {
@@ -18,16 +19,27 @@ const ModalStyles = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 400,
+  maxWidth: "100%",
   bgcolor: "background.paper",
-  border: "2px solid #000",
   boxShadow: 24,
-  p: 4,
+  display:Block
+
 };
 
 function ProductsCard({ category }) {
   const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
+
+  const modalSrc = useRef()
+  const modalAlt = useRef()
+
+  const handleOpen = (src, alt) => {
+    setOpen(true);
+    modalSrc.current = src
+    modalAlt.current = alt
+    // const img = document.getElementById('imageFullScreen')
+    // img.setAttribute('alt',alt)
+    // img.setAttribute('src',src)
+  }
   const handleClose = () => setOpen(false);
   //main function
   let filteredProds = products.filter((prod) => prod.category === category);
@@ -40,14 +52,14 @@ function ProductsCard({ category }) {
       >
         Nuestros trabajos
       </Typography>
-      <Box sx={{ paddingTop: "6rem" }}>
+      <Box sx={{ paddingY: "4rem" }}>
         <Container>
           <Grid container spacing={5}>
             {filteredProds.map((product) => (
               <Grid key={product.id} item xs={12} sm={6} md={4} lg={4}>
                 <Card elevation={8}>
                   <Box>
-                    <CardActionArea onClick={handleOpen}>
+                    <CardActionArea onClick={() => handleOpen(product.image, product.name)}>
                       <CardMedia sx={{ height: 300 }} image={product.image} />
                     </CardActionArea>
                     <CardContent>
@@ -60,26 +72,26 @@ function ProductsCard({ category }) {
                     </CardContent>
                   </Box>
                 </Card>
-                {/*   modal component */}
-                <Modal
-                  open={open}
-                  onClose={handleClose}
-                  aria-labelledby={product.id}
-                >
-                  <Box sx={ModalStyles}>
-                    <img
-                      src={product.image}
-                      loading="lazy"
-                      alt="producto img"
-                      id={product.id}
-                    />
-                  </Box>
-                </Modal>
               </Grid>
             ))}
           </Grid>
         </Container>
       </Box>
+
+      {/*   modal component */}
+      <Modal
+        open={open}
+        onClose={handleClose}
+      >
+        <Box sx={ModalStyles}>
+          <img
+            id="imageFullScreen"
+            src={modalSrc.current}
+            loading="lazy"
+            alt={modalAlt.current}
+          />
+        </Box>
+      </Modal>
     </>
   );
 }

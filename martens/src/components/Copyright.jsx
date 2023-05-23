@@ -1,9 +1,9 @@
-import { Typography, Link } from "@mui/material";
+import { Typography, Link, Box } from "@mui/material";
 import React from "react";
 
 export default function Copyright(props) {
   return (
-    <div sx={{ paddingTop: "2rem" }}>
+    <Box sx={{ marginY: ".5rem" }}>
       <Typography
         variant="body1"
         color="text.secondary"
@@ -28,6 +28,6 @@ export default function Copyright(props) {
         {new Date().getFullYear()}
         {"."}
       </Typography>
-    </div>
+    </Box>
   );
 }
