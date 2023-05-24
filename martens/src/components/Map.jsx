@@ -6,7 +6,7 @@ export default function Map() {
     <Box
       sx={{
         width: "100%",
-        paddingY: "2rem",
+        paddingTop: "2rem",
         border: "none",
         borderRadius: "3px",
       }}

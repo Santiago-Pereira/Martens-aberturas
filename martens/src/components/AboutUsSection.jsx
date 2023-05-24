@@ -6,13 +6,13 @@ export default function AboutUsSection() {
   return (
     <Container>
       <Box sx={{ paddingY: "2rem" }}>
-        <Grid2 container spacing={5}>
+        <Grid2 container spacing={9}>
           <Grid2
             xs={12}
             md={6}
             sx={{
-              padding: "2rem 0",
               display: "flex",
+              flexDirection: "column",
               justifyContent: "center",
             }}
             id="aboutUs"
@@ -25,11 +25,9 @@ export default function AboutUsSection() {
           >
             <img
               src={
-                "https://res.cloudinary.com/dmatgvjjy/image/upload/v1682810418/martens/Captura_desde_2023-04-29_20-20-09_ehbz5y.png"
-              }
+               "https://res.cloudinary.com/dmatgvjjy/image/upload/v1684961432/martens/dylan-gillis-KdeqA3aTnBY-unsplash_1_omd5vp_1_sjce74.jpg"             }
               alt="martens-historia"
               loading="lazy"
-              sx={{ maxWidth: "100%", height: "auto" }}
             />
           </Grid2>
           <Grid2
@@ -109,7 +107,6 @@ export default function AboutUsSection() {
                 paddingBottom: "1rem",
               }}
             >
-              {" "}
               Nuestros valores
             </Typography>
             <Typography
@@ -117,7 +114,6 @@ export default function AboutUsSection() {
               color="initial"
               sx={{ textAlign: "justify" }}
             >
-              {" "}
               Siempre nos hemos adaptado y reinventado para cumplir con las
               demandas cambiantes de los tiempos actuales. Nuestro compromiso
               con la calidad y la satisfacción del cliente nos ha mantenido en
@@ -147,11 +143,10 @@ export default function AboutUsSection() {
           >
             <img
               src={
-                "https://res.cloudinary.com/dmatgvjjy/image/upload/v1682810418/martens/Captura_desde_2023-04-29_20-20-09_ehbz5y.png"
+                "https://res.cloudinary.com/dmatgvjjy/image/upload/v1684960628/martens/WhatsApp_Image_2023-05-24_at_5.29.14_PM_1_gc3mbt.jpg"
               }
               alt="martens-historia"
               loading="lazy"
-              sx={{ maxWidth: "100%", height: "auto" }}
             />
           </Grid2>
         </Grid2>

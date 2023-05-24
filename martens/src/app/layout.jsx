@@ -44,8 +44,13 @@ import { NavBar } from "@/components/NavBar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "saffsaf",
-  description: "...",
+  title: "Martens Aberturas",
+  description: "Martens Aberturas: Fabricamos aberturas de alta calidad desde 1957. Con un enfoque en la excelencia y la satisfacción del cliente, ofrecemos modelos únicos y duraderos. Descubre nuestra historia de adaptación, calidad y relaciones sólidas con clientes satisfechos. ¡Confía en nosotros para satisfacer tus necesidades actuales y futuras en aberturas de calidad",
+  keywords:"Martens Aberturas, Aberturas de calidad, Trabajos en hierro, Aberturas de alta calidad, Fábrica de aberturas, Modelos únicos de aberturas, puertas, portones, escaleras , pergolas , tandil , soluciones generales Tandil",
+  author:"Lis Medina y Santiago Pereira",
+  // icons: {
+  //   icon: DoorBackIcon,
+  // },
 };
 
 export default function RootLayout({ children }) {
