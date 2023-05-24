@@ -6,7 +6,9 @@ import Map from "@/components/Map";
 import AbstractSection from "@/components/AbstractSection";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import ProductsCard from "@/components/ProductsCard";
+import Footer from "@/components/Footer";
+import WhatsAppBtn from "@/components/WhatsAppBtn";
+import Copyright from "@/components/Copyright";
 
 export default function Home() {
   AOS.init();
@@ -18,7 +20,12 @@ export default function Home() {
         <AbstractSection />
         <Form />
         <Map />
+        <WhatsAppBtn />
       </main>
+      <footer>
+        <Footer />
+        <Copyright />
+      </footer>
     </>
   );
 }
