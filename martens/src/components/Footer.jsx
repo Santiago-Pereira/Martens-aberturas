@@ -113,7 +113,7 @@ function Footer() {
                 textAlign: "start",
               }}
             >
-              <Typography sx={{ fontSize: "1.7rem" }}>
+              <Typography sx={{ fontSize: "1rem" }}>
                 Horarios de atención
               </Typography>
               <Typography sx={{ fontSize: "1rem" }}>

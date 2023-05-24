@@ -57,9 +57,14 @@ function ProductsCard({ category }) {
                 <Card elevation={8}>
                   <Box>
                     <CardActionArea
-                      onClick={() => handleOpen(product.image, product.name)}
+                      onClick={() =>
+                        handleOpen(product.imageModal, product.name)
+                      }
                     >
-                      <CardMedia sx={{ height: 300 }} image={product.image} />
+                      <CardMedia
+                        sx={{ height: 300, maxWidth: "100%" }}
+                        image={product.image}
+                      />
                     </CardActionArea>
                     <CardContent>
                       <Typography gutterBottom variant="h5" component="div">
