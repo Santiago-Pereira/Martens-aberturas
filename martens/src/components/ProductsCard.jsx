@@ -83,7 +83,7 @@ function ProductsCard({ category }) {
       </Box>
 
       {/*   modal component */}
-      <Modal open={open} onClose={handleClose}>
+      <Modal open={open} onClose={handleClose} ref={modalSrc}>
         <Box sx={ModalStyles}>
           <img
             id="imageFullScreen"

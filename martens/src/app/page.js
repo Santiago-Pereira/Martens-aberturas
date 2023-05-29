@@ -4,14 +4,14 @@ import Banner from "@/components/Banner";
 import Form from "@/components/Form";
 import Map from "@/components/Map";
 import AbstractSection from "@/components/AbstractSection";
-import AOS from "aos";
-import "aos/dist/aos.css";
+/* import AOS from "aos";
+import "aos/dist/aos.css"; */
 import Footer from "@/components/Footer";
 import WhatsAppBtn from "@/components/WhatsAppBtn";
 import Copyright from "@/components/Copyright";
 
 export default function Home() {
-  AOS.init();
+  /*   AOS.init(); */
   return (
     <>
       <main>
