@@ -25,7 +25,8 @@ export default function AboutUsSection() {
           >
             <img
               src={
-               "https://res.cloudinary.com/dmatgvjjy/image/upload/v1684961432/martens/dylan-gillis-KdeqA3aTnBY-unsplash_1_omd5vp_1_sjce74.jpg"             }
+                "https://res.cloudinary.com/dmatgvjjy/image/upload/v1684961432/martens/dylan-gillis-KdeqA3aTnBY-unsplash_1_omd5vp_1_sjce74.jpg"
+              }
               alt="martens-historia"
               loading="lazy"
             />
@@ -66,17 +67,16 @@ export default function AboutUsSection() {
               En 1957, un grupo de trabajadores entusiastas, liderados por
               Carlos Martens, comenzaron a perseguir sus sueños de fabricar algo
               especial. Comenzaron con la creación de juegos de sillones de
-              hierro de caño para jardín y se dedicaron a la herrería de pesada
-              de hierro, siguiendo las tendencias de aquellos tiempos. Con el
-              tiempo, surgió la idea de mejorar la producción. Logramos adquirir
-              una máquina plegadora, lo que nos permitió establecer nuestra
-              fábrica de aberturas. Siempre nos esforzamos por ofrecer modelos
-              únicos y de alta calidad, diferenciándonos de los estándares
-              comunes. La gente nos ha reconocido a lo largo de los años, aunque
-              no hemos hecho mucho énfasis en la publicidad. Nuestro mayor éxito
-              ha sido el boca a boca, con clientes satisfechos que nos
-              recomiendan a sus amigos, familiares e incluso a las generaciones
-              futuras.
+              hierro de caño para jardín y se dedicaron a la herrería pesada de
+              hierro, siguiendo las tendencias de aquellos tiempos. Con los años
+              surgió la idea de mejorar la producción y poder enfocarnos en
+              trabajos más detallistas. Logramos adquirir una máquina plegadora,
+              y fue en ese momento que se sumó Héctor Martens, lo que nos
+              permitió establecer nuestra fábrica de aberturas. Siempre nos
+              hemos esforzado por ofrecer modelos únicos y de alta calidad,
+              diferenciándonos de los estándares comunes. Además, hemos brindado
+              soluciones y reparaciones a los vecinos de la ciudad y el campo,
+              lo que nos llevó a trabajar en toda la provincia de BsAs.
             </Typography>
           </Grid2>
         </Grid2>
@@ -114,14 +114,15 @@ export default function AboutUsSection() {
               color="initial"
               sx={{ textAlign: "justify" }}
             >
-              Siempre nos hemos adaptado y reinventado para cumplir con las
-              demandas cambiantes de los tiempos actuales. Nuestro compromiso
-              con la calidad y la satisfacción del cliente nos ha mantenido en
-              la mente y los corazones de las personas. Estamos orgullosos de
-              haber construido relaciones sólidas con nuestros clientes a lo
-              largo de los años. Estamos agradecidos por su apoyo continuo y
-              seguiremos esforzándonos para satisfacer las necesidades del
-              presente y del futuro.
+              A lo largo de los años, la gente nos ha reconocido, aunque no
+              hemos hecho mucho énfasis en la publicidad. Nuestro mayor éxito ha
+              sido el boca a boca, con clientes satisfechos que nos recomiendan
+              a sus amigos, familiares e incluso a las generaciones futuras.
+              Después de más de 60 años en el rubro, seguimos siendo una PYME de
+              Tandil, dedicada a la fabricación y colocación de todo tipo de
+              aberturas. Nos mantenemos avanzando y adaptándonos a los nuevos
+              diseños y diferentes prestaciones que brindan los materiales de
+              esta época.
             </Typography>
           </Grid2>
 

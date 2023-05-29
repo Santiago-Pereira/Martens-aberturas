@@ -3,7 +3,7 @@ import {
   CardActionArea,
   Container,
   Grid,
-  Modal,
+  // Modal,
   Typography,
 } from "@mui/material";
 import Card from "@mui/material/Card";
@@ -57,9 +57,9 @@ function ProductsCard({ category }) {
                 <Card elevation={8}>
                   <Box>
                     <CardActionArea
-                      onClick={() =>
-                        handleOpen(product.imageModal, product.name)
-                      }
+                      // onClick={() =>
+                      //   handleOpen(product.imageModal, product.name)
+                      // }
                     >
                       <CardMedia
                         sx={{ height: 300, maxWidth: "100%" }}
@@ -83,7 +83,7 @@ function ProductsCard({ category }) {
       </Box>
 
       {/*   modal component */}
-      <Modal open={open} onClose={handleClose} ref={modalSrc}>
+      {/* <Modal open={open} onClose={handleClose} ref={modalSrc}>
         <Box sx={ModalStyles}>
           <img
             id="imageFullScreen"
@@ -92,7 +92,7 @@ function ProductsCard({ category }) {
             alt={modalAlt.current}
           />
         </Box>
-      </Modal>
+      </Modal> */}
     </>
   );
 }
