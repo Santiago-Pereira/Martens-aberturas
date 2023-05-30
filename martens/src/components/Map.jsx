@@ -26,7 +26,7 @@ export default function Map() {
                 width: "100%",
                 height: "50vh",
               }}
-              src="https://maps.google.com/maps?width=&amp;height=&amp;hl=en&amp;q=tandil%2C%20Primera%20Junta%20967+(T%C3%ADtulo)&amp;ie=UTF8&amp;t=&amp;z=17&amp;iwloc=B&amp;output=embed"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3173.2176473582085!2d-59.11906582420625!3d-37.313671872105104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95911ff08fcab9bf%3A0x20d9db738c01cb7f!2sPrimera%20Junta%20%26%20Avenida%20Espora%2C%20B7001%20Tandil%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1685481296070!5m2!1ses-419!2sar"
             ></iframe>
           </Grid2>
         </Grid2>
