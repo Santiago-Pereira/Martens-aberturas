@@ -50,7 +50,7 @@ export default function CategoriesDropDownMobile({ hideMenu }) {
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
-            <Typography>Catergorias</Typography>
+            <Typography>Categorías</Typography>
           </AccordionSummary>
           <AccordionDetails>
             <div onClick={hideMenu}>{categoryRendering()}</div>
