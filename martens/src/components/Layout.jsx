@@ -1,16 +1,16 @@
 "use client";
-import dynamic from "next/dynamic";
+import "../app/globals.css";
+import { Inter } from "next/font/google";
+import { NavBar } from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import WhatsAppBtn from "@/components/WhatsAppBtn";
 import Copyright from "@/components/Copyright";
 
-function page({ params }) {
-  const Navigation = dynamic(() => import("@/components/ProductsCard"), {
-    ssr: false,
-  });
+export default function Layout({ children }) {
   return (
     <>
-      <Navigation category={params.category} />;
+      <NavBar />
+      <main>{children}</main>
       <WhatsAppBtn />
       <footer>
         <Footer />
@@ -19,5 +19,3 @@ function page({ params }) {
     </>
   );
 }
-
-export default page;

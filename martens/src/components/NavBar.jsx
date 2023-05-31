@@ -21,8 +21,8 @@ import Link from "next/link";
 const drawerWidth = 240;
 const navItems = [
   { title: "Inicio", url: "/" },
-  { title: "Nosotros", url: "#aboutUs" },
-  { title: "Contacto", url: "#contact" },
+  { title: "Nosotros", url: "/#aboutUs" },
+  { title: "Contacto", url: "/#contact" },
 ];
 
 export function NavBar(props) {
@@ -86,6 +86,7 @@ export function NavBar(props) {
             </Link>
           </Box>
           <Box
+            className="nav-links"
             sx={{
               display: { xs: "none", sm: "flex" },
               gap: "20px",

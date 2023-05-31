@@ -4,25 +4,15 @@ import Banner from "@/components/Banner";
 import Form from "@/components/Form";
 import Map from "@/components/Map";
 import AbstractSection from "@/components/AbstractSection";
-import Footer from "@/components/Footer";
-import WhatsAppBtn from "@/components/WhatsAppBtn";
-import Copyright from "@/components/Copyright";
 
 export default function Home() {
   return (
     <>
-      <main>
-        <Banner />
-        <AboutUsSection />
-        <AbstractSection />
-        <Form />
-        <Map />
-        <WhatsAppBtn />
-      </main>
-      <footer>
-        <Footer />
-        <Copyright />
-      </footer>
+      <Banner />
+      <AboutUsSection />
+      <AbstractSection />
+      <Form />
+      <Map />
     </>
   );
 }

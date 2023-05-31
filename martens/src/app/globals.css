@@ -30,18 +30,18 @@ a {
 }
 
 /* ---------------------------------------------navbar items styles-------------------------------------------------------- */
-.css-99t0as a {
+.nav-links a {
   transition: 0.3s ease;
   color: black;
-  font-size: 16px;
+  font-size: 16px;  
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
   text-decoration: none;
   border-top: 4px solid white;
   border-bottom: 4px solid white;
   padding: 10px 0;
-  margin: 0 20px;
 }
 
-.css-99t0as a:hover {
+.nav-links a:hover {
   border-top: 4px solid black;
   border-bottom: 4px solid black;
   padding: 6px 0;
@@ -55,7 +55,6 @@ a {
   border-top: 4px solid white;
   border-bottom: 4px solid white;
   padding: 10px 0;
-  margin: 0 20px;
 }
 #basic-button:hover {
   text-decoration: none;
