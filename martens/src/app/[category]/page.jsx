@@ -1,25 +1,22 @@
 "use client";
 import dynamic from "next/dynamic";
-import { useRouter } from 'next/router';
-import Layout from '../components/layout';
+import { usePathname } from 'next/navigation';
 
 function Page() {
   const Prods = dynamic(() => import("@/components/ProductsCard"), {
     ssr: false,
   });
 
-  const router = useRouter();
+  const pathname = usePathname();
   
   return (
-    <Layout>
-      <Prods category={router.query.category} />;
-    </Layout>
+      <Prods category={pathname.replace('/','')} />
   );
 }
 
 export default Page;
 
-import categoriesData from "../app/categoriesData";
+import categoriesData from "../categoriesData.js";
 
 export async function getStaticProps() {
   return {
