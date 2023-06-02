@@ -9,7 +9,7 @@ import MailIcon from "@mui/icons-material/Mail";
 import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import React, { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+// import emailjs from "@emailjs/browser";
 import { Container, Snackbar, Alert, AlertTitle } from "@mui/material";
 
 const theme = createTheme();
@@ -21,21 +21,21 @@ export default function Form() {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_hid7rop",
-        "template_e4h0pyg",
-        form.current,
-        "HY36OVbTtstdhpeyX"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    // emailjs
+    //   .sendForm(
+    //     "service_hid7rop",
+    //     "template_e4h0pyg",
+    //     form.current,
+    //     "HY36OVbTtstdhpeyX"
+    //   )
+    //   .then(
+    //     (result) => {
+    //       console.log(result.text);
+    //     },
+    //     (error) => {
+    //       console.log(error.text);
+    //     }
+    //   );
     form.current.reset();
   };
 

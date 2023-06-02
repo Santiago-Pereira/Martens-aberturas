@@ -11,7 +11,6 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Box from "@mui/material/Box";
 import { useRef, useState } from "react";
-import { Block } from "@mui/icons-material";
 
 //modal styles:
 const ModalStyles = {
