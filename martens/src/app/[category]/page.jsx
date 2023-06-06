@@ -1,6 +1,6 @@
 "use client";
 import dynamic from "next/dynamic";
-import { usePathname } from 'next/navigation';
+import { usePathname } from "next/navigation";
 
 function Page() {
   const Prods = dynamic(() => import("@/components/ProductsCard"), {
@@ -8,15 +8,13 @@ function Page() {
   });
 
   const pathname = usePathname();
-  
-  return (
-      <Prods category={pathname.replace('/','')} />
-  );
+
+  return <Prods category={pathname.replace("/", "")} />;
 }
 
 export default Page;
 
-import categoriesData from "../categoriesData.js";
+/* import categoriesData from "../categoriesData.js";
 
 export async function getStaticProps() {
   return {
@@ -46,4 +44,4 @@ export async function getStaticPaths() {
   // return { paths, fallback: false };
 
   return { paths: [], fallback: true };
-}
+} */
