@@ -1,3 +1,4 @@
+"use client";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import IconButton from "@mui/material/IconButton";
 import Link from "next/link";

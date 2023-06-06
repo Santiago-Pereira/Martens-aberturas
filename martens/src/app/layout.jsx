@@ -10,7 +10,7 @@ import Copyright from "@/components/Copyright";
 
 // TODO meta https://github.com/vercel/next.js/blob/canary/examples/cms-contentful/components/meta.js
 
-export const metadata = {
+const metadata = {
   title: "Martens Aberturas",
   description:
     "Martens Aberturas: Fabricamos aberturas de alta calidad desde 1957. Con un enfoque en la excelencia y la satisfacción del cliente, ofrecemos modelos únicos y duraderos. Descubre nuestra historia de adaptación, calidad y relaciones sólidas con clientes satisfechos. ¡Confía en nosotros para satisfacer tus necesidades actuales y futuras en aberturas de calidad",
@@ -26,13 +26,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-          <NavBar />
-          <main>{children}</main>
-          <WhatsAppBtn />
-          <footer>
-            <Footer />
-            <Copyright />
-          </footer>
+        <NavBar />
+        <main>{children}</main>
+        <WhatsAppBtn />
+        <footer>
+          <Footer />
+          <Copyright />
+        </footer>
       </body>
     </html>
   );

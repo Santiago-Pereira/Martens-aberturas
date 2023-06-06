@@ -1,3 +1,4 @@
+"use client";
 import { Typography, Link, Box } from "@mui/material";
 import React from "react";
 

@@ -1,3 +1,4 @@
+"use client";
 import MenuItem from "@mui/material/MenuItem";
 import { useState } from "react";
 import { Box } from "@mui/material";

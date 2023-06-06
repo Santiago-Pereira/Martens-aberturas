@@ -1,3 +1,4 @@
+"use client";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Grid2 from "@mui/material/Unstable_Grid2"; // Grid version 2
