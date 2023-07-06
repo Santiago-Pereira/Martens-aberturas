@@ -25,7 +25,8 @@ let products = [
   },
   {
     name: "Puerta salida de emergencias",
-    description: "Puerta salida de emergencias de 2 hojas fabricada en aluminio",
+    description:
+      "Salida de emergencia con cierre antipánico fabricada en aluminio",
     category: "puertas",
     id: 3,
     image: "./images/PUERTAS/chicas/4.jpeg",
@@ -70,7 +71,7 @@ let products = [
     id: 8,
     image: "./images/PUERTAS/chicas/9.jpeg",
     imageModal: "./images/PUERTAS/9.jpeg",
-  }, 
+  },
   {
     name: "Portón corredizo recto",
     description: "producto de alta calidad",
@@ -234,7 +235,8 @@ let products = [
   },
   {
     name: "Escalera de hierro estructural y maderas",
-    description: "Escalera de hierro estructural y maderas, acceso a primer piso",
+    description:
+      "Escalera de hierro estructural y maderas, acceso a primer piso",
     category: "pergolas",
     id: 32,
     image: "./images/escalerasPergolas/chicas/3.jpeg",
@@ -363,7 +365,8 @@ let products = [
   },
   {
     name: "Barandas para piscinas",
-    description: "Barandas para piscinas fabricadas en hierro y vidrio laminado",
+    description:
+      "Barandas para piscinas fabricadas en hierro y vidrio laminado",
     category: "soluciones-generales",
     id: 48,
     image: "./images/solucGrales/chicas/4.jpeg",
@@ -371,7 +374,8 @@ let products = [
   },
   {
     name: "Barandas para piscinas",
-    description: "Barandas para piscinas fabricadas en hierro y vidrio laminado",
+    description:
+      "Barandas para piscinas fabricadas en hierro y vidrio laminado",
     category: "soluciones-generales",
     id: 49,
     image: "./images/solucGrales/chicas/5.jpeg",
@@ -379,7 +383,8 @@ let products = [
   },
   {
     name: "Barandas para piscinas",
-    description: "Barandas para piscinas fabricadas en hierro y vidrio laminado",
+    description:
+      "Barandas para piscinas fabricadas en hierro y vidrio laminado",
     category: "soluciones-generales",
     id: 50,
     image: "./images/solucGrales/chicas/6.jpeg",

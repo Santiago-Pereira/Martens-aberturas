@@ -62,18 +62,7 @@ export function NavBar(props) {
     <>
       <AppBar component="header" sx={{ backgroundColor: "#fff" }}>
         <Toolbar sx={{ justifyContent: "space-between" }}>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" }, color: "black" }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Box
-            sx={{ display: { xs: "none", sm: "block" }, width: "fit-content" }}
-          >
+          <Box sx={{ display: { sm: "block" }, width: "fit-content" }}>
             <Link href={"/"}>
               <img
                 src={
@@ -85,6 +74,21 @@ export function NavBar(props) {
               />
             </Link>
           </Box>
+
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            edge="start"
+            onClick={handleDrawerToggle}
+            sx={{
+              mr: 2,
+              display: { sm: "none" },
+              color: "black",
+            }}
+          >
+            <MenuIcon />
+          </IconButton>
+
           <Box
             className="nav-links"
             sx={{
