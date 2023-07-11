@@ -1,4 +1,3 @@
-"use client";
 import AboutUsSection from "@/components/AboutUsSection";
 import Banner from "@/components/Banner";
 import Form from "@/components/Form";
