@@ -1,7 +1,7 @@
 "use client";
 import dynamic from "next/dynamic";
 import { useState, useEffect } from "react";
-import { usePathname, useSearchParams } from 'next/navigation';
+import { useSearchParams } from 'next/navigation';
 
 function Page() {
   const Prods = dynamic(() => import("@/components/ProductsCard"), {
@@ -9,14 +9,11 @@ function Page() {
   });
 
   const [category, setCategory] = useState();
-  const pathname = usePathname()
-  const searchParams = useSearchParams()
+  const searchParams = useSearchParams();
 
   useEffect(() => {
-    const url = `${pathname}?${searchParams}`
-    console.log(url)
     setCategory(searchParams.get('categoria'));
-  }, [pathname, searchParams])
+  }, [searchParams]);
 
   return <Prods category={category} />;
 }
