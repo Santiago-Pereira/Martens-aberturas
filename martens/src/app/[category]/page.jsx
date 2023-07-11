@@ -16,11 +16,11 @@ export default Page;
 
 import categoriesData from "../categoriesData.js";
 
-export async function getStaticProps() {
-  return {
-    props: {},
-  };
-}
+// export async function getStaticProps() {
+//   return {
+//     props: {},
+//   };
+// }
 
 export async function getStaticPaths() {
   // When this is true (in preview environments) don't
