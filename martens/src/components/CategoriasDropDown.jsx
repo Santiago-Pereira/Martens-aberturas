@@ -5,8 +5,11 @@ import { useState } from "react";
 import Button from "@mui/material/Button";
 import Link from "next/link";
 import categoriesData from "../app/categoriesData";
+// import { useRouter } from 'next/navigation';
 
 export default function CategoriasDropDown({ hideMenu }) {
+  // const router = useRouter();
+
   //dropdown on menu functions
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
@@ -18,12 +21,16 @@ export default function CategoriasDropDown({ hideMenu }) {
     setAnchorEl(null);
   };
 
+
   /* categories rendering */
   function categoryRendering() {
     return categoriesData?.map((element) => (
-      <Link href="/[category]" as={`/${element.code}`} key={element.id}>
+      <Link href={`/productos?categoria=${element.code}`} key={element.id}>
         <MenuItem onClick={handleClose}>{element.title}</MenuItem>
       </Link>
+      // <button type="button" onClick={() => router.push(`/productos?categoria=${element.code}`)} key={element.id}>
+      //   {element.title}
+      // </button>
     ));
   }
 
