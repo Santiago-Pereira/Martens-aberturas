@@ -21,7 +21,7 @@ export default function CategoriesDropDownMobile({ hideMenu }) {
   /* categories rendering */
   function categoryRendering() {
     return categoriesData?.map((element) => (
-      <a href={element.code} key={element.id}>
+      <a href={`/${element.code}`} key={element.id}>
         <MenuItem onClick={handleClose}>{element.title}</MenuItem>
       </a>
     ));

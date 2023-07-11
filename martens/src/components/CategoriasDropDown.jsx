@@ -21,7 +21,7 @@ export default function CategoriasDropDown({ hideMenu }) {
   /* categories rendering */
   function categoryRendering() {
     return categoriesData?.map((element) => (
-      <Link href={element.code} key={element.id}>
+      <Link href="/[category]" as={`/${element.code}`} key={element.id}>
         <MenuItem onClick={handleClose}>{element.title}</MenuItem>
       </Link>
     ));
