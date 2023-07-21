@@ -7,7 +7,8 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import categoriesData from "@/app/categoriesData";
+import categoriesData from "../app/categoriesData";
+import Link from "next/link";
 
 export default function CategoriesDropDownMobile({ hideMenu }) {
   //dropdown on menu functions
@@ -21,9 +22,9 @@ export default function CategoriesDropDownMobile({ hideMenu }) {
   /* categories rendering */
   function categoryRendering() {
     return categoriesData?.map((element) => (
-      <a href={`/productos?categoria=${element.code}`} key={element.id}>
+      <Link href={`/productos?categoria=${element.code}`} key={element.id}>
         <MenuItem onClick={handleClose}>{element.title}</MenuItem>
-      </a>
+      </Link>
     ));
   }
   return (
